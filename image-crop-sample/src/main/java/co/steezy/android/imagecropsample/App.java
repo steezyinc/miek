@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.lyft.android.scissorssample;
+package co.steezy.android.imagecropsample;
 
 import android.app.Application;
 import android.content.Context;

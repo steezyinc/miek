@@ -1,9 +1,11 @@
-<img src="art/scissors.png" width="256" align="right" hspace="20" />
+# README #
+<img src="art/meik.png" />
 
-Scissors
+Miek
 =========================
 
-Fixed viewport image cropping library for Android with built-in support for [Picasso][picasso], [Glide][glide] or [Universal Image Loader][uil].
+A fixed viewport image cropping library for Android with built-in support for [Picasso][picasso], [Glide][glide] or [Universal Image Loader][uil].
+Forked from [Scissors][scissors].
 
 Usage
 -----
@@ -49,7 +51,7 @@ cropView.extensions()
 
 Questions
 ----------
-For questions please use github issues. Mark question issue with "question" label.
+Ask Rod I guess? ヽ(•̀ω•́ )ゝ
 
 Download
 --------
@@ -57,8 +59,6 @@ Download
 ```groovy
 compile 'com.lyft:scissors:1.1.1'
 ```
-
-Snapshots of development version are available in [Sonatype's `snapshots` repository][snap].
 
 License
 -------
@@ -85,9 +85,8 @@ Please see `CONTRIBUTING.md`.
 Contributors
 ------------
 - [See contributors on GitHub](https://github.com/lyft/scissors/graphs/contributors)
-- [Join us, work for Lyft](https://www.lyft.com/jobs)
 
- [snap]: https://oss.sonatype.org/content/repositories/snapshots/
  [picasso]: https://github.com/square/picasso
  [glide]: https://github.com/bumptech/glide
  [uil]: https://github.com/nostra13/Android-Universal-Image-Loader
+ [scissors]: https://github.com/lyft/scissors

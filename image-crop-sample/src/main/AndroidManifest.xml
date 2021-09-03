@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest
-    package="com.lyft.android.scissorssample"
+<manifest package="co.steezy.android.imagecropsample"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+    xmlns:tools="http://schemas.android.com/tools">
 
   <application
-      android:name=".App"
+      android:name="co.steezy.android.imagecropsample.App"
       android:theme="@style/Theme.Scissors"
       >
 
     <activity
-        android:name=".MainActivity"
+        android:name="co.steezy.android.imagecropsample.MainActivity"
         android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
+        tools:ignore="LockedOrientationActivity"
         >
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -20,8 +21,10 @@
       </intent-filter>
     </activity>
     <activity
-        android:name=".CropResultActivity"
+        android:name="co.steezy.android.imagecropsample.CropResultActivity"
         android:noHistory="true"
+        android:screenOrientation="portrait"
+        tools:ignore="LockedOrientationActivity"
         />
 
   </application>

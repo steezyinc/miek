@@ -13,31 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.lyft.android.scissorssample;
+package co.steezy.android.imagecropsample;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
-import butterknife.Bind;
-import butterknife.ButterKnife;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
+
 import java.io.File;
 
-public class CropResultActivity extends Activity {
+import co.steezy.android.imagecropsample.databinding.ActivityCropResultBinding;
+
+public class CropResultActivity extends AppCompatActivity {
 
     private static final String EXTRA_FILE_PATH = "EXTRA_FILE_PATH";
-
-    @Bind(R.id.result_image)
-    ImageView resultView;
+    private ActivityCropResultBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_crop_result);
-        ButterKnife.bind(this);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_crop_result);
 
         String filePath = getIntent().getStringExtra(EXTRA_FILE_PATH);
         File imageFile = new File(filePath);
@@ -45,21 +46,21 @@ public class CropResultActivity extends Activity {
         Picasso.with(this)
                 .load(imageFile)
                 .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
-                .into(resultView);
+                .into(binding.resultImage);
 
         // Or Glide
         //Glide.with(this)
         //        .load(imageFile)
         //        .diskCacheStrategy(DiskCacheStrategy.NONE)
         //        .skipMemoryCache(true)
-        //        .into(resultView);
+        //        .into(binding.resultImage);
 
         // Or Android-Universal-Image-Loader
         //DisplayImageOptions options = new DisplayImageOptions.Builder()
         //        .cacheInMemory(false)
         //        .cacheOnDisk(false)
         //        .build();
-        //ImageLoader.getInstance().displayImage("file://" + filePath, resultView, options);
+        //ImageLoader.getInstance().displayImage("file://" + filePath, binding.resultImage, options);
     }
 
     static void startUsing(File croppedPath, Activity activity) {
