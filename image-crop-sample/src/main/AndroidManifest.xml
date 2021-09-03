@@ -9,6 +9,7 @@
   <application
       android:name="co.steezy.android.imagecropsample.App"
       android:theme="@style/Theme.Scissors"
+      android:allowBackup="true"
       android:supportsRtl="true"
       android:icon="@mipmap/ic_launcher"
       tools:ignore="AllowBackup">

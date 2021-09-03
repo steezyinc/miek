@@ -1,4 +1,4 @@
-package co.steezy.android.scissors;
+package co.steezy.miek.android;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

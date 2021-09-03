@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.steezy.android.scissors;
+package co.steezy.miek.android;
 
 import android.graphics.Bitmap;
 import android.graphics.Rect;
@@ -26,7 +26,7 @@ import java.security.MessageDigest;
 
 class GlideFillViewportTransformation extends BitmapTransformation {
 
-    private static final String ID = "co.steezy.android.scissors.GlideFillViewportTransformation";
+    private static final String ID = "co.steezy.miek.android.GlideFillViewportTransformation";
     private static final byte[] ID_BYTES = ID.getBytes(Charset.defaultCharset());
 
     private final int viewportWidth;

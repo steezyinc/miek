@@ -14,12 +14,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <co.steezy.android.scissors.CropView
+        <co.steezy.miek.android.CropView
             android:id="@+id/crop_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cropviewViewportRatio="1"
-            />
+            app:cropviewViewportOverlayColor="#80EBEFEF"
+            app:cropviewViewportOverlayPadding="16dp"
+            app:cropviewShape="oval"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/crop_fab"

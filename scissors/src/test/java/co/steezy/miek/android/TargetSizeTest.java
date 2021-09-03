@@ -1,4 +1,4 @@
-package co.steezy.android.scissors;
+package co.steezy.miek.android;
 
 import android.graphics.Rect;
 import java.util.Arrays;
@@ -10,6 +10,8 @@ import org.robolectric.annotation.Config;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
+
+import co.steezy.miek.android.CropViewExtensions;
 
 @RunWith(ParameterizedRobolectricTestRunner.class)
 @Config(manifest = Config.NONE)

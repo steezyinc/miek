@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.steezy.android.scissors;
+package co.steezy.miek.android;
 
 import android.net.Uri;
 import androidx.annotation.NonNull;

@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.steezy.android.scissors;
+package co.steezy.miek.android;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
-import co.steezy.android.scissors.R;
+import co.steezy.miek.android.R;
 
 class CropViewConfig {
 

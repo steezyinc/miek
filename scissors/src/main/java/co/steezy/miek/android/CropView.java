@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.steezy.android.scissors;
+package co.steezy.miek.android;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -59,7 +59,7 @@ public class CropView extends ImageView {
     private Matrix transform = new Matrix();
     private Extensions extensions;
 
-    /** Corresponds to the values in {@link co.steezy.android.scissors.R.attr#cropviewShape} */
+    /** Corresponds to the values in {@link co.steezy.miek.android.R.attr#cropviewShape} */
     @Retention(RetentionPolicy.SOURCE)
     @IntDef({ Shape.RECTANGLE, Shape.OVAL })
     public @interface Shape {

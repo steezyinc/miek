@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.steezy.android.scissors;
+package co.steezy.miek.android;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -22,14 +22,14 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.Nullable;
 import android.util.Log;
 
-import co.steezy.android.scissors.BuildConfig;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+
+import co.steezy.miek.android.BuildConfig;
 
 class Utils {
 

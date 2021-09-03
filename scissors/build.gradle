@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -18,9 +20,15 @@ android {
     dexOptions {
         preDexLibraries = !rootProject.ext.ci
     }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 dependencies {
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     // Test
     testImplementation 'junit:junit:' + rootProject.ext.junitVersion
     testImplementation 'org.mockito:mockito-core:' + rootProject.ext.mockitoVersion
@@ -35,3 +43,6 @@ dependencies {
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
+repositories {
+    mavenCentral()
+}

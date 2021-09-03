@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.steezy.android.scissors;
+package co.steezy.miek.android;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.graphics.Rect;
 
-import static co.steezy.android.scissors.CropView.Extensions.LoaderType;
+import static co.steezy.miek.android.CropView.Extensions.LoaderType;
 
 class CropViewExtensions {
 
