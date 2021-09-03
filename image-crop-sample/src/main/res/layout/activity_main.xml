@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.lyft.android.scissors2.CropView
+        <co.steezy.android.scissors.CropView
             android:id="@+id/crop_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
