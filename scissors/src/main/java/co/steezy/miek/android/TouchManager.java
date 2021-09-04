@@ -144,7 +144,8 @@ class TouchManager {
             float x = velocityX == 0 ? position.getX() : target.getX() * scale;
             float y = velocityY == 0 ? position.getY() : target.getY() * scale;
 
-            gestureAnimator.animateTranslation(position.getX(), x, position.getY(), y);
+            //causing snap back problem
+//            gestureAnimator.animateTranslation(position.getX(), x, position.getY(), y);
 
             return true;
         }
@@ -178,8 +179,8 @@ class TouchManager {
         }
 
         private TouchPoint centerCoordinates(TouchPoint coordinates) {
-            float x = coordinates.getX() + (imageBounds.right / 2);
-            float y = coordinates.getY() + (imageBounds.bottom / 2);
+            float x = coordinates.getX() + (imageBounds.right / 2f);
+            float y = coordinates.getY() + (imageBounds.bottom / 2f);
             return new TouchPoint(x, y);
         }
     };
@@ -188,9 +189,7 @@ class TouchManager {
         this.imageView = imageView;
         scaleGestureDetector = new ScaleGestureDetector(imageView.getContext(), scaleGestureListener);
         gestureDetector = new GestureDetector(imageView.getContext(), gestureListener);
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            scaleGestureDetector.setQuickScaleEnabled(true);
-        }
+        scaleGestureDetector.setQuickScaleEnabled(true);
 
         this.cropViewConfig = cropViewConfig;
 

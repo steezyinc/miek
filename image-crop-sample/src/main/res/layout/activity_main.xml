@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             app:cropviewViewportRatio="1"
             app:cropviewViewportOverlayColor="#80EBEFEF"
-            app:cropviewViewportOverlayPadding="16dp"
+            app:cropviewViewportOverlayPadding="32dp"
             app:cropviewShape="oval"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -11,7 +11,7 @@ import java.util.concurrent.Future;
 public class CropRequest {
 
   private final CropView cropView;
-  private Bitmap.CompressFormat format = Bitmap.CompressFormat.JPEG;
+  private Bitmap.CompressFormat format = Bitmap.CompressFormat.PNG;
   private int quality = CropViewConfig.DEFAULT_IMAGE_QUALITY;
 
   CropRequest(@NonNull CropView cropView) {
@@ -20,7 +20,7 @@ public class CropRequest {
   }
 
   /**
-   * Compression format to use, defaults to {@link Bitmap.CompressFormat#JPEG}.
+   * Compression format to use, defaults to {@link Bitmap.CompressFormat#PNG}.
    *
    * @return current request for chaining.
    */

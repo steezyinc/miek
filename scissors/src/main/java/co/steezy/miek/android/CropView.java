@@ -91,7 +91,7 @@ public class CropView extends ImageView {
 
         bitmapPaint.setFilterBitmap(true);
         setViewportOverlayColor(config.getViewportOverlayColor());
-        shape = config.shape();
+        shape = config.getShape();
 
         // We need anti-aliased Paint to smooth the curved edges
         viewportPaint.setFlags(viewportPaint.getFlags() | Paint.ANTI_ALIAS_FLAG);
@@ -153,37 +153,37 @@ public class CropView extends ImageView {
 
         // top left arc
         ovalPath.reset();
-        ovalPath.moveTo(left, getHeight() / 2); // middle of the left side of the circle
+        ovalPath.moveTo(left, getHeight() / 2f); // middle of the left side of the circle
         ovalPath.arcTo(ovalRect, 180, 90, false); // draw arc to top
         ovalPath.lineTo(left, top); // move to top-left corner
-        ovalPath.lineTo(left, getHeight() / 2); // move back to origin
+        ovalPath.lineTo(left, getHeight() / 2f); // move back to origin
         ovalPath.close();
         canvas.drawPath(ovalPath, viewportPaint);
 
         // top right arc
         ovalPath.reset();
-        ovalPath.moveTo(getWidth() / 2, top); // middle of the top side of the circle
+        ovalPath.moveTo(getWidth() / 2f, top); // middle of the top side of the circle
         ovalPath.arcTo(ovalRect, 270, 90, false); // draw arc to the right
         ovalPath.lineTo(right, top); // move to top-right corner
-        ovalPath.lineTo(getWidth() / 2, top); // move back to origin
+        ovalPath.lineTo(getWidth() / 2f, top); // move back to origin
         ovalPath.close();
         canvas.drawPath(ovalPath, viewportPaint);
 
         // bottom right arc
         ovalPath.reset();
-        ovalPath.moveTo(right, getHeight() / 2); // middle of the right side of the circle
+        ovalPath.moveTo(right, getHeight() / 2f); // middle of the right side of the circle
         ovalPath.arcTo(ovalRect, 0, 90, false); // draw arc to the bottom
         ovalPath.lineTo(right, bottom); // move to bottom-right corner
-        ovalPath.lineTo(right, getHeight() / 2); // move back to origin
+        ovalPath.lineTo(right, getHeight() / 2f); // move back to origin
         ovalPath.close();
         canvas.drawPath(ovalPath, viewportPaint);
 
         // bottom left arc
         ovalPath.reset();
-        ovalPath.moveTo(getWidth() / 2, bottom); // middle of the bottom side of the circle
+        ovalPath.moveTo(getWidth() / 2f, bottom); // middle of the bottom side of the circle
         ovalPath.arcTo(ovalRect, 90, 90, false); // draw arc to the left
         ovalPath.lineTo(left, bottom); // move to bottom-left corner
-        ovalPath.lineTo(getWidth() / 2, bottom); // move back to origin
+        ovalPath.lineTo(getWidth() / 2f, bottom); // move back to origin
         ovalPath.close();
         canvas.drawPath(ovalPath, viewportPaint);
 

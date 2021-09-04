@@ -36,7 +36,7 @@ import co.steezy.android.imagecropsample.databinding.ActivityMainBinding;
 import rx.Observable;
 import rx.subscriptions.CompositeSubscription;
 
-import static android.graphics.Bitmap.CompressFormat.JPEG;
+import static android.graphics.Bitmap.CompressFormat.PNG;
 import static rx.android.schedulers.AndroidSchedulers.mainThread;
 import static rx.schedulers.Schedulers.io;
 
@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
+//        binding.cropView.setViewportOverlayPadding(150);
 
         binding.cropView.setOnTouchListener((view, motionEvent) -> {
             if (motionEvent.getPointerCount() > 1 || binding.cropView.getImageBitmap() == null) {
@@ -125,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         Observable<Void> onSave = Observable.from(binding.cropView.extensions()
                 .crop()
                 .quality(100)
-                .format(JPEG)
+                .format(PNG)
                 .into(croppedFile))
                 .subscribeOn(io())
                 .observeOn(mainThread());
