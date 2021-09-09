@@ -8,6 +8,8 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.BitmapDisplayer;
 
+import co.steezy.miek.android.interfaces.BitmapLoader;
+
 /**
  * A {@link BitmapLoader} with transformation for {@link ImageLoader} image library.
  *

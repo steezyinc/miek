@@ -22,6 +22,8 @@ import android.graphics.Rect;
 
 import static co.steezy.miek.android.CropView.Extensions.LoaderType;
 
+import co.steezy.miek.android.interfaces.BitmapLoader;
+
 class CropViewExtensions {
 
     static void pickUsing(Activity activity, int requestCode) {

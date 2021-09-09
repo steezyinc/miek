@@ -8,6 +8,8 @@ import static co.steezy.miek.android.CropViewExtensions.resolveBitmapLoader;
 
 import androidx.annotation.Nullable;
 
+import co.steezy.miek.android.interfaces.BitmapLoader;
+
 public class LoadRequest {
 
     private final CropView cropView;

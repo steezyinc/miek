@@ -1,6 +1,7 @@
 package co.steezy.miek.android
 
 import android.widget.ImageView
+import co.steezy.miek.android.interfaces.BitmapLoader
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.engine.DiskCacheStrategy

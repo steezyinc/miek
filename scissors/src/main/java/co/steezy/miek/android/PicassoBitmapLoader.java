@@ -24,6 +24,8 @@ import com.squareup.picasso.RequestCreator;
 import com.squareup.picasso.Transformation;
 import java.io.File;
 
+import co.steezy.miek.android.interfaces.BitmapLoader;
+
 /**
  * A {@link BitmapLoader} with transformation for {@link Picasso} image library.
  *
