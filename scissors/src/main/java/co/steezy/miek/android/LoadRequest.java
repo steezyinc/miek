@@ -3,7 +3,6 @@ package co.steezy.miek.android;
 import android.graphics.Bitmap;
 import android.view.ViewTreeObserver;
 
-import static co.steezy.miek.android.CropView.Extensions.LoaderType;
 import static co.steezy.miek.android.CropViewExtensions.resolveBitmapLoader;
 
 import androidx.annotation.Nullable;

@@ -20,8 +20,6 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.graphics.Rect;
 
-import static co.steezy.miek.android.CropView.Extensions.LoaderType;
-
 import co.steezy.miek.android.interfaces.BitmapLoader;
 
 class CropViewExtensions {
