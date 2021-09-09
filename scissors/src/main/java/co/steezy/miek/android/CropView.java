@@ -409,13 +409,6 @@ public class CropView extends androidx.appcompat.widget.AppCompatImageView {
             return new LoadRequest(cropView).using(bitmapLoader);
         }
 
-        public enum LoaderType {
-            PICASSO,
-            GLIDE,
-            UIL,
-            CLASS_LOOKUP
-        }
-
         /**
          * Load a {@link Bitmap} using a reference to a {@link BitmapLoader}, you must call {@link LoadRequest#load(Object)} afterwards.
          *
