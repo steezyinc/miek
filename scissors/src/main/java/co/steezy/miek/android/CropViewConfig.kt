@@ -11,7 +11,7 @@ class CropViewConfig {
         const val DEFAULT_IMAGE_QUALITY = 100
         const val DEFAULT_VIEWPORT_OVERLAY_PADDING = 0
         const val DEFAULT_VIEWPORT_OVERLAY_COLOR = -0x38000000 // Black with 200 alpha
-        const val DEFAULT_SHAPE = CropView.Shape.RECTANGLE
+        const val DEFAULT_SHAPE = Shape.RECTANGLE
 
         @JvmStatic
         fun from(context: Context, attrs: AttributeSet?): CropViewConfig {
@@ -24,7 +24,7 @@ class CropViewConfig {
             cropViewConfig.minScale = attributes.getFloat(R.styleable.CropView_cropviewMinScale, DEFAULT_MINIMUM_SCALE)
             cropViewConfig.viewportOverlayColor = attributes.getColor(R.styleable.CropView_cropviewViewportOverlayColor, DEFAULT_VIEWPORT_OVERLAY_COLOR)
             cropViewConfig.viewportOverlayPadding = attributes.getDimensionPixelSize(R.styleable.CropView_cropviewViewportOverlayPadding, DEFAULT_VIEWPORT_OVERLAY_PADDING)
-            @CropView.Shape
+            @Shape
             cropViewConfig.shape = attributes.getInt(R.styleable.CropView_cropviewShape, DEFAULT_SHAPE)
 
             attributes.recycle()
@@ -39,6 +39,6 @@ class CropViewConfig {
     var viewportOverlayPadding = DEFAULT_VIEWPORT_OVERLAY_PADDING
     var viewportOverlayColor = DEFAULT_VIEWPORT_OVERLAY_COLOR
 
-    @CropView.Shape
+    @Shape
     var shape = DEFAULT_SHAPE
 }

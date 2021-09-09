@@ -35,19 +35,18 @@ import android.widget.ImageView;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
-import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.io.File;
 import java.io.OutputStream;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
+
+import co.steezy.miek.android.interfaces.BitmapLoader;
 
 /**
  * An {@link ImageView} with a fixed viewport and cropping capabilities.
  */
-public class CropView extends ImageView {
+public class CropView extends androidx.appcompat.widget.AppCompatImageView {
 
     private TouchManager touchManager;
     private CropViewConfig config;
@@ -59,14 +58,6 @@ public class CropView extends ImageView {
     private Matrix transform = new Matrix();
     private Extensions extensions;
 
-    /** Corresponds to the values in {@link co.steezy.miek.android.R.attr#cropviewShape} */
-    @Retention(RetentionPolicy.SOURCE)
-    @IntDef({ Shape.RECTANGLE, Shape.OVAL })
-    public @interface Shape {
-
-        int RECTANGLE = 0;
-        int OVAL = 1;
-    }
 
     @Shape
     private int shape = Shape.RECTANGLE;
