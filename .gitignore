@@ -109,3 +109,4 @@ venv
 junit.xml
 executeAppium.bash
 automation/**/*.jpeg
+automation/**/*.png

@@ -1,6 +1,16 @@
 Change Log
 ==========
 
+## [Unreleased]
+
+### Added
+### Changed
+
+- [CORE-2728](https://app.clickup.com/t/2289103/CORE-2728) - Setup Miek (updated libraries and added kotlin support)
+
+### Fixed
+### Removed
+
 Version 1.1.2 *(2017-03-28)*
 ----------------------------
 - Add support for oval overlay

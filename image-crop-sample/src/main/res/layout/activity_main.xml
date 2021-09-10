@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="co.steezy.android.imagecropsample.MainActivity" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <co.steezy.miek.android.CropView
+            android:id="@+id/crop_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cropviewViewportRatio="1"
+            app:cropviewViewportOverlayColor="#80EBEFEF"
+            app:cropviewViewportOverlayPadding="32dp"
+            app:cropviewShape="oval"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/crop_fab"
+            style="@style/FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="@dimen/crop_fab_margin"
+            android:src="@drawable/ic_content_content_cut"
+            android:visibility="gone"
+            android:onClick="@{activity::onCropClicked}"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pick_mini_fab"
+            style="@style/FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/pick_mini_fab_margin"
+            android:src="@drawable/ic_content_add"
+            android:visibility="gone"
+            app:fabSize="mini"
+            android:onClick="@{activity::onPickClicked}"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pick_fab"
+            style="@style/FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_content_add"
+            android:onClick="@{activity::onPickClicked}"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ratio_fab"
+            style="@style/FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="@dimen/aspect_fab_margin"
+            android:src="@drawable/ic_aspect_ratio"
+            android:visibility="gone"
+            android:onClick="@{activity::onRatioClicked}"/>
+
+    </FrameLayout>
+</layout>
