@@ -16,9 +16,11 @@
 package co.steezy.miek.android;
 
 import android.app.Activity;
-import android.app.Fragment;
+
 import android.content.Intent;
 import android.graphics.Rect;
+
+import androidx.fragment.app.Fragment;
 
 import co.steezy.miek.android.interfaces.BitmapLoader;
 
