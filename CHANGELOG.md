@@ -9,6 +9,9 @@ Change Log
 - [CORE-2728](https://app.clickup.com/t/2289103/CORE-2728) - Setup Miek (updated libraries and added kotlin support)
 
 ### Fixed
+
+- [CORE-2734](https://app.clickup.com/t/2289103/CORE-2734) - Resolve build errors to create aar
+
 ### Removed
 
 Version 1.1.2 *(2017-03-28)*
